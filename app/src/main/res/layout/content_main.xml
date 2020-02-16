@@ -1,0 +1,1370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="526sp"
+        android:layout_height="822sp"
+        android:adjustViewBounds="true"
+        android:cropToPadding="true"
+        android:scaleType="fitStart"
+        android:src="@drawable/weatherapp_background"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.121"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="43dp"
+        android:layout_height="40dp"
+        android:text="R"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.975"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.004" />
+
+    <TextView
+        android:id="@+id/temperature_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="temperature"
+        android:textColor="#000000"
+        android:textSize="35sp"
+        android:layout_marginLeft="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.085" />
+
+    <TextView
+        android:id="@+id/summary_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="summary"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#000000"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.966"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.080" />
+
+    <TextView
+        android:id="@+id/cityName_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="city"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.050"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.005" />
+
+    <TextView
+        android:id="@+id/coordinates_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="coordinates"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.054" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="215dp"
+        android:background="#2232C2E2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/humidity_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="humidity"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.730" />
+    <TextView
+        android:id="@+id/HUMIDITY_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HUMIDITY"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.680" />
+
+
+    <TextView
+        android:id="@+id/visibility_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="visibility"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.730" />
+    <TextView
+        android:id="@+id/VISIBILITY_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VISIBILITY"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.680" />
+
+
+    <TextView
+        android:id="@+id/windSpeed_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="wind speed"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.850" />
+    <TextView
+        android:id="@+id/WIND_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WIND"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.800" />
+
+
+    <TextView
+        android:id="@+id/pressure_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="pressure"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.850" />
+    <TextView
+        android:id="@+id/PRESSURE_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PRESSURE"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.800" />
+
+
+    <TextView
+        android:id="@+id/precipProbability_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160sp"
+        android:text="precipProbability"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.950" />
+
+    <TextView
+        android:id="@+id/chanceOfRain_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160sp"
+        android:text="CHANCE OF RAIN"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.875" />
+
+
+    <TextView
+        android:id="@+id/PRECIPITATION_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160sp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#000000"
+        android:background="#6932DCE2"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.7"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.875" />
+    <TextView
+        android:id="@+id/precipitation_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160sp"
+        android:text="precipitation"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.7"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.950" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.100"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.175" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.100"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.295" />
+
+    <HorizontalScrollView
+        android:layout_width="473dp"
+        android:layout_height="72dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.100"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.200">
+
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#1E32DCE2"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/h1t"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="h1t"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:layout_alignLeft="@+id/h1" />
+            <TextView
+                android:id="@+id/h2t"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/h1t"
+                android:text="h2t"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:layout_alignLeft="@+id/h2" />
+            <TextView
+                android:id="@+id/h3t"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/h2t"
+                android:text="h3t"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:layout_alignLeft="@+id/h3" />
+            <TextView
+            android:id="@+id/h4t"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/h2t"
+            android:text="h4t"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:layout_alignLeft="@+id/h4" />
+            <TextView
+                android:id="@+id/h5t"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/h2t"
+                android:text="h5t"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:layout_alignLeft="@+id/h5" />
+            <TextView
+                android:id="@+id/h6t"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/h2t"
+                android:text="h6t"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:layout_alignLeft="@+id/h6" />
+            <TextView
+                android:id="@+id/h7t"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/h2t"
+                android:text="h7t"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:layout_alignLeft="@+id/h7" />
+            <TextView
+                android:id="@+id/h8t"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/h2t"
+                android:text="h8t"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:layout_alignLeft="@+id/h8" />
+            <TextView
+                android:id="@+id/h9t"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="h9t"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:layout_alignLeft="@+id/h9" />
+            <TextView
+                android:id="@+id/h10t"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="h10t"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:layout_alignLeft="@+id/h10" />
+            <TextView
+                android:id="@+id/h11t"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="h11t"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:layout_alignLeft="@+id/h11" />
+            <TextView
+                android:id="@+id/h12t"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/h1t"
+                android:text="h2t"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:layout_alignLeft="@+id/h12" />
+            <TextView
+                android:id="@+id/h13t"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/h2t"
+                android:text="h3t"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:layout_alignLeft="@+id/h13" />
+            <TextView
+                android:id="@+id/h14t"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/h2t"
+                android:text="h4t"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:layout_alignLeft="@+id/h14" />
+            <TextView
+                android:id="@+id/h15t"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/h2t"
+                android:text="h5t"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:layout_alignLeft="@+id/h15" />
+            <TextView
+                android:id="@+id/h16t"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/h2t"
+                android:text="h6t"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:layout_alignLeft="@+id/h16" />
+            <TextView
+                android:id="@+id/h17t"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/h2t"
+                android:text="h7t"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:layout_alignLeft="@+id/h17" />
+            <TextView
+                android:id="@+id/h18t"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/h2t"
+                android:text="h8t"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:layout_alignLeft="@+id/h18" />
+            <TextView
+                android:id="@+id/h19t"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="h9t"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:layout_alignLeft="@+id/h19" />
+            <TextView
+                android:id="@+id/h20t"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="h9t"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:layout_alignLeft="@+id/h20" />
+            <TextView
+                android:id="@+id/h21t"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="h9t"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:layout_alignLeft="@+id/h21" />
+            <TextView
+                android:id="@+id/h22t"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="h9t"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:layout_alignLeft="@+id/h22" />
+            <TextView
+                android:id="@+id/h23t"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="h9t"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:layout_alignLeft="@+id/h23" />
+            <TextView
+                android:id="@+id/h24t"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="h9t"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:layout_alignLeft="@+id/h24" />
+
+            <ImageView
+                android:id="@+id/h1i"
+                android:layout_width="24sp"
+                android:layout_height="24sp"
+                android:layout_below="@+id/h1t"
+                android:layout_alignLeft="@+id/h1"/>
+            <ImageView
+                android:id="@+id/h2i"
+                android:layout_width="24sp"
+                android:layout_height="24sp"
+                android:layout_alignBottom="@+id/h1i"
+                android:layout_alignLeft="@+id/h2"/>
+            <ImageView
+                android:id="@+id/h3i"
+                android:layout_width="24sp"
+                android:layout_height="24sp"
+                android:layout_alignBottom="@+id/h1i"
+                android:layout_alignLeft="@+id/h3"/>
+            <ImageView
+                android:id="@+id/h4i"
+                android:layout_width="24sp"
+                android:layout_height="24sp"
+                android:layout_alignBottom="@+id/h1i"
+                android:layout_alignLeft="@+id/h4"/>
+            <ImageView
+                android:id="@+id/h5i"
+                android:layout_width="24sp"
+                android:layout_height="24sp"
+                android:layout_alignBottom="@+id/h1i"
+                android:layout_alignLeft="@+id/h5"/>
+            <ImageView
+                android:id="@+id/h6i"
+                android:layout_width="24sp"
+                android:layout_height="24sp"
+                android:layout_alignBottom="@+id/h1i"
+                android:layout_alignLeft="@+id/h6"/>
+            <ImageView
+                android:id="@+id/h7i"
+                android:layout_width="24sp"
+                android:layout_height="24sp"
+                android:layout_alignBottom="@+id/h1i"
+                android:layout_alignLeft="@+id/h7"/>
+            <ImageView
+                android:id="@+id/h8i"
+                android:layout_width="24sp"
+                android:layout_height="24sp"
+                android:layout_alignBottom="@+id/h1i"
+                android:layout_alignLeft="@+id/h8"/>
+            <ImageView
+                android:id="@+id/h9i"
+                android:layout_width="24sp"
+                android:layout_height="24sp"
+                android:layout_alignBottom="@+id/h1i"
+                android:layout_alignLeft="@+id/h9"/>
+            <ImageView
+                android:id="@+id/h10i"
+                android:layout_width="24sp"
+                android:layout_height="24sp"
+                android:layout_alignBottom="@+id/h1i"
+                android:layout_alignLeft="@+id/h10"/>
+            <ImageView
+                android:id="@+id/h11i"
+                android:layout_width="24sp"
+                android:layout_height="24sp"
+                android:layout_alignBottom="@+id/h1i"
+                android:layout_alignLeft="@+id/h11"/>/>
+            <ImageView
+                android:id="@+id/h12i"
+                android:layout_width="24sp"
+                android:layout_height="24sp"
+                android:layout_alignBottom="@+id/h1i"
+                android:layout_alignLeft="@+id/h12"/>
+            <ImageView
+                android:id="@+id/h13i"
+                android:layout_width="24sp"
+                android:layout_height="24sp"
+                android:layout_alignBottom="@+id/h1i"
+                android:layout_alignLeft="@+id/h13"/>
+            <ImageView
+                android:id="@+id/h14i"
+                android:layout_width="24sp"
+                android:layout_height="24sp"
+                android:layout_alignBottom="@+id/h1i"
+                android:layout_alignLeft="@+id/h14"/>
+            <ImageView
+                android:id="@+id/h15i"
+                android:layout_width="24sp"
+                android:layout_height="24sp"
+                android:layout_alignBottom="@+id/h1i"
+                android:layout_alignLeft="@+id/h15"/>
+            <ImageView
+                android:id="@+id/h16i"
+                android:layout_width="24sp"
+                android:layout_height="24sp"
+                android:layout_alignBottom="@+id/h1i"
+                android:layout_alignLeft="@+id/h16"/>
+            <ImageView
+                android:id="@+id/h17i"
+                android:layout_width="24sp"
+                android:layout_height="24sp"
+                android:layout_alignBottom="@+id/h1i"
+                android:layout_alignLeft="@+id/h17"/>
+            <ImageView
+                android:id="@+id/h18i"
+                android:layout_width="24sp"
+                android:layout_height="24sp"
+                android:layout_alignBottom="@+id/h1i"
+                android:layout_alignLeft="@+id/h18"/>
+            <ImageView
+                android:id="@+id/h19i"
+                android:layout_width="24sp"
+                android:layout_height="24sp"
+                android:layout_alignBottom="@+id/h1i"
+                android:layout_alignLeft="@+id/h19"/>
+            <ImageView
+                android:id="@+id/h20i"
+                android:layout_width="24sp"
+                android:layout_height="24sp"
+                android:layout_alignBottom="@+id/h1i"
+                android:layout_alignLeft="@+id/h20"/>
+            <ImageView
+                android:id="@+id/h21i"
+                android:layout_width="24sp"
+                android:layout_height="24sp"
+                android:layout_alignBottom="@+id/h1i"
+                android:layout_alignLeft="@+id/h21"/>
+            <ImageView
+                android:id="@+id/h22i"
+                android:layout_width="24sp"
+                android:layout_height="24sp"
+                android:layout_alignBottom="@+id/h1i"
+                android:layout_alignLeft="@+id/h22"/>
+            <ImageView
+                android:id="@+id/h23i"
+                android:layout_width="24sp"
+                android:layout_height="24sp"
+                android:layout_alignBottom="@+id/h1i"
+                android:layout_alignLeft="@+id/h23"/>
+            <ImageView
+                android:id="@+id/h24i"
+                android:layout_width="24sp"
+                android:layout_height="24sp"
+                android:layout_alignBottom="@+id/h1i"
+                android:layout_alignLeft="@+id/h24"/>
+
+
+
+            <TextView
+                android:id="@+id/h1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15sp"
+                android:text="h1"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:layout_below="@+id/h1i" />
+            <TextView
+                android:id="@+id/h2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:layout_toRightOf="@id/h1"
+                android:layout_alignBottom="@+id/h1"
+                android:text="h2"
+                android:textColor="#000000"
+                android:textSize="20sp"/>
+            <TextView
+                android:id="@+id/h3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:layout_toRightOf="@id/h2"
+                android:layout_alignBottom="@+id/h1"
+                android:text="h3"
+                android:textColor="#000000"
+                android:textSize="20sp"/>
+            <TextView
+                android:id="@+id/h4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:layout_alignBottom="@+id/h1"
+                android:layout_toRightOf="@id/h3"
+                android:text="h4"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+            <TextView
+                android:id="@+id/h5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:layout_alignBottom="@+id/h1"
+                android:layout_toRightOf="@id/h4"
+                android:text="h5"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintVertical_bias="0.00" />
+            <TextView
+                android:id="@+id/h6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:layout_alignBottom="@+id/h1"
+                android:layout_toRightOf="@id/h5"
+                android:text="h6"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintVertical_bias="0.00" />
+            <TextView
+                android:id="@+id/h7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/h6"
+                android:layout_marginLeft="20sp"
+                android:layout_alignBottom="@+id/h1"
+                android:text="h7"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintVertical_bias="0.00" />
+            <TextView
+                android:id="@+id/h8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/h7"
+                android:layout_marginLeft="20sp"
+                android:layout_alignBottom="@+id/h1"
+                android:text="h8"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintVertical_bias="0.00" />
+            <TextView
+                android:id="@+id/h9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/h8"
+                android:layout_marginLeft="20sp"
+                android:layout_alignBottom="@+id/h1"
+                android:text="h9"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintVertical_bias="0.00" />
+            <TextView
+                android:id="@+id/h10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/h9"
+                android:text="h10"
+                android:layout_marginLeft="20sp"
+                android:layout_alignBottom="@+id/h1"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+            <TextView
+                android:id="@+id/h11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/h10"
+                android:layout_marginLeft="20sp"
+                android:layout_alignBottom="@+id/h1"
+                android:text="h11"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+            <TextView
+                android:id="@+id/h12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/h11"
+                android:text="h12"
+                android:layout_marginLeft="20sp"
+                android:layout_alignBottom="@+id/h1"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintVertical_bias="0.00" />
+            <TextView
+                android:id="@+id/h13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/h12"
+                android:text="h13"
+                android:layout_marginLeft="20sp"
+                android:layout_alignBottom="@+id/h1"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintVertical_bias="0.00" />
+            <TextView
+                android:id="@+id/h14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/h13"
+                android:layout_marginLeft="20sp"
+                android:layout_alignBottom="@+id/h1"
+                android:text="h14"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintVertical_bias="0.00" />
+            <TextView
+                android:id="@+id/h15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/h14"
+                android:text="h15"
+                android:layout_marginLeft="20sp"
+                android:layout_alignBottom="@+id/h1"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintVertical_bias="0.00" />
+            <TextView
+                android:id="@+id/h16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:layout_alignBottom="@+id/h1"
+                android:layout_toRightOf="@id/h15"
+                android:text="h16"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000000"
+                android:textSize="20sp"/>
+            <TextView
+                android:id="@+id/h17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/h16"
+                android:layout_marginLeft="20sp"
+                android:layout_alignBottom="@+id/h1"
+                android:text="h17"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintVertical_bias="0.00" />
+            <TextView
+                android:id="@+id/h18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/h17"
+                android:layout_marginLeft="20sp"
+                android:layout_alignBottom="@+id/h1"
+                android:text="h18"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintVertical_bias="0.00" />
+            <TextView
+                android:id="@+id/h19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/h18"
+                android:layout_marginLeft="20sp"
+                android:layout_alignBottom="@+id/h1"
+                android:text="h19"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintVertical_bias="0.00" />
+            <TextView
+                android:id="@+id/h20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/h19"
+                android:text="h20"
+                android:layout_marginLeft="20sp"
+                android:layout_alignBottom="@+id/h1"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintVertical_bias="0.00" />
+            <TextView
+                android:id="@+id/h21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/h20"
+                android:layout_marginLeft="20sp"
+                android:layout_alignBottom="@+id/h1"
+                android:text="h21"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintVertical_bias="0.00" />
+            <TextView
+                android:id="@+id/h22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/h21"
+                android:text="h22"
+                android:layout_marginLeft="20sp"
+                android:layout_alignBottom="@+id/h1"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintVertical_bias="0.00" />
+            <TextView
+                android:id="@+id/h23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/h22"
+                android:text="h23"
+                android:layout_marginLeft="20sp"
+                android:layout_alignBottom="@+id/h1"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintVertical_bias="0.00" />
+            <TextView
+                android:id="@+id/h24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/h23"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="25sp"
+                android:layout_alignBottom="@+id/h1"
+                android:text="h24"
+                android:textColor="#000000"
+                android:textSize="20sp"/>
+        </RelativeLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/AVERAGETEMP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="The average temperature for the next 48 hours:"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:layout_marginLeft="15sp"
+        android:background="#1E32DCE2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.105"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.312" />
+
+    <TextView
+        android:id="@+id/d1w"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="d2w"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.050"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.350" />
+    <TextView
+        android:id="@+id/d2w"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="d2w"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.200"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.350" />
+    <TextView
+        android:id="@+id/d3w"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="d3w"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.350"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.350" />
+    <TextView
+        android:id="@+id/d4w"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="d4w"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.500"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.350" />
+    <TextView
+        android:id="@+id/d5w"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="d5w"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.650"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.350" />
+    <TextView
+        android:id="@+id/d6w"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="d6w"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.800"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.350" />
+    <TextView
+        android:id="@+id/d7w"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="d7w"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.950"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.350" />
+
+
+    <TextView
+        android:id="@+id/d2h"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="d2h"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.200"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.400" />
+    <TextView
+        android:id="@+id/d2l"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="d2l"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.200"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.450" />
+    <TextView
+        android:id="@+id/d3h"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="d3h"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.350"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.400" />
+    <TextView
+        android:id="@+id/d3l"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="d3l"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.350"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.450" />
+    <TextView
+        android:id="@+id/d4h"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="d4h"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.500"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.400" />
+    <TextView
+        android:id="@+id/d4l"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="d4l"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.500"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.450" />
+    <TextView
+        android:id="@+id/d5h"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="d5h"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.650"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.400" />
+    <TextView
+        android:id="@+id/d5l"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="d5l"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.650"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.450" />
+    <TextView
+        android:id="@+id/d6h"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="d6h"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.800"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.400" />
+    <TextView
+        android:id="@+id/d6l"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="d6l"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.800"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.450" />
+    <TextView
+        android:id="@+id/d7h"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="d7h"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.950"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.400" />
+    <TextView
+        android:id="@+id/d7l"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="d7l"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.950"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.450" />
+    <TextView
+        android:id="@+id/d1h"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="d1h"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.050"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.400" />
+    <TextView
+        android:id="@+id/d1l"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="d1l"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.050"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.450" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvDate"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="290dp"
+        android:text="Weather for "
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5sp"
+        android:hint="Select Date"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.420"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.495" />
+    <TextView
+        android:id="@+id/pdh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvDate"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="110sp"
+        android:hint="pdh"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:id="@+id/pdl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvDate"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="70sp"
+        android:hint="pdl"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:id="@+id/pdt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvDate"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="110sp"
+        android:hint="pdt"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.545"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvHour"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="290dp"
+        android:text="At "
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.545" />
+
+    <TextView
+        android:id="@+id/tvHour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:hint="Select Hour"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.420"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.545" />
+
+    <TextView
+        android:id="@+id/ydl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Today feels like special"
+        android:layout_marginLeft="10sp"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.035"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.615" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
